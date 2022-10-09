@@ -26,3 +26,16 @@ AFRAME.registerComponent('foo', {
         })
     }
 })
+
+AFRAME.registerComponent('markerhandler', {
+    init: function () {
+        this.el.addEventListener("markerFound", () => {
+            modelNameContainer.textContent = this.el.id
+            modelInfo.classList.add("active")
+        })
+        this.el.addEventListener("markerLost", () => {
+            modelInfo.classList.remove("active")
+            modelNameContainer.textContent = ""
+        })
+    }
+})

@@ -44,7 +44,11 @@
                         >Факелы</a
                     >
                 </li>
-                <li><a href="#">Реактор</a></li>
+                <li>
+                    <a href="https://gromkov-cloud.github.io/ar-app.reactor/"
+                        >Реактор</a
+                    >
+                </li>
                 <li>
                     <a
                         href="https://gromkov-cloud.github.io/ar-app.rectification/"
@@ -59,6 +63,9 @@
                 <p class="loading-model-status"></p>
             </div>
         </div>
+        <div class="model-info-bar">
+            <p>some text</p>
+        </div>
 
         <a-scene
             embedded
@@ -68,43 +75,24 @@
             gesture-detector
             id="scene"
         >
-            <!-- torches -->
-            <!-- <a-marker
-                preset="custom"
-                type="pattern"
-                url="./src/markers/torches/torch_big/pattern.patt"
-                raycaster="objects: .clickable"
-                emitevents="true"
-                cursor="fuse: false; rayOrigin: mouse;"
-                id="torch_big_marker"
-            >
-                <a-entity
-                    positon="0 0 0"
-                    scale="0.05 0.05 0.05"
-                    id="torch_big_model"
-                    class="clickable"
-                    gesture-handler
-                    gltf-model="./src/models/torch_big.glb"
-                    foo
-                >
-                </a-entity>
-            </a-marker> -->
+            <!-- reactor -->
             <a-marker
                 preset="custom"
                 type="pattern"
-                url="./src/markers/torches/torches_small/pattern.patt"
+                url="./src/markers/reactor/pattern.patt"
                 raycaster="objects: .clickable"
                 emitevents="true"
                 cursor="fuse: false; rayOrigin: mouse;"
-                id="torches_small_marker"
+                id="Реактор"
+                markerhandler
             >
                 <a-entity
                     positon="0 0 0"
                     scale="0.05 0.05 0.05"
-                    id="torches_small_model"
+                    id="reactor_model"
                     class="clickable"
                     gesture-handler
-                    gltf-model="./src/models/torches_small.glb"
+                    gltf-model="./src/models/reactor.glb"
                     foo
                 >
                 </a-entity>

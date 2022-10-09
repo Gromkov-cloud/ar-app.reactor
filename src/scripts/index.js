@@ -2,11 +2,16 @@ let totalModelsCount
 let loadedModelsCount = 0
 let loadingStatus
 let loaderBlur
+let modelInfo
+let modelNameContainer
 
 document.addEventListener("DOMContentLoaded", () => {
     totalModelsCount = document.querySelectorAll("a-marker").length
     loadingStatus = document.querySelector(".loading-model-status")
     loaderBlur = document.querySelector(".preloader-blur")
+    modelInfo = document.querySelector(".model-info-bar")
+    modelNameContainer = modelInfo.querySelector("p")
+
     loadingStatus.textContent = `Загружено моделей: 0/${totalModelsCount}`
 })
 
@@ -39,3 +44,4 @@ AFRAME.registerComponent('markerhandler', {
         })
     }
 })
+
